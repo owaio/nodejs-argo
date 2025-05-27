@@ -2,12 +2,13 @@ FROM node:20.11.1-alpine3.19
 
 WORKDIR /app
 
-COPY . .
+COPY package.json ./
+COPY app.js ./
 
 EXPOSE 3000
 
-RUN apt update -y &&\
-    chmod +x index.js &&\
-    npm install 
+RUN apk add --no-cache curl bash && \
+    npm install && \
+    chmod +x index.js
     
 CMD ["node", "index.js"]
