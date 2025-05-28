@@ -8,8 +8,8 @@
 #EXPOSE 3000
 
 #RUN apk add --no-cache curl bash && \
-    npm install && \
-    chmod +x index.js
+#    npm install && \
+#    chmod +x index.js
     
 #CMD ["node", "index.js"]
 
