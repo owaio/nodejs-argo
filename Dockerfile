@@ -1,4 +1,5 @@
-FROM node:20.11.1-alpine3.19
+#FROM node:20.11.1-alpine3.19 //This is for galaxycloud
+FROM node:slim
 
 WORKDIR /app
 
